@@ -7,11 +7,11 @@ const app = express();
 const PORT = 3000;
 
 // Twilio credentials
-const accountSid = 'AC65637a406cc63a325e7b8c91d231000d';
-const authToken = 'b545d0f91a530fe769d780408be5bdfd';
+const accountSid = 'Twilio_sid';
+const authToken = 'Twilio_auth';
 const twilioClient = new Twilio(accountSid, authToken);
-const twilioNumber = '+14138932057';
-const phoneNumber = '+919505437075';  // recipient phone number
+const twilioNumber = 'Twilio_number';
+const phoneNumber = 'To_number';  // recipient phone number
 
 app.use(express.json());
 

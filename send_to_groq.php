@@ -7,7 +7,7 @@ use LucianoTonet\GroqPHP\Groq;
 header('Content-Type: application/json');
 
 // Configure Groq API client
-$groq = new Groq('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');  // Replace with your actual API key
+$groq = new Groq('Groq_API');  // Replace with your actual API key
 
 // Receive message from the client
 $request = json_decode(file_get_contents('php://input'), true);
@@ -44,7 +44,7 @@ try {
 }
 
 // Send the reply as an SMS (uncomment if needed)
-$phone_number = '+919505437075';  // Set recipient phone number here
+$phone_number = 'To_number';  // Set recipient phone number here
 sendSMS($phone_number, $bot_reply);  // Call the Twilio SMS function
 
 // Send the reply back to the GUI
@@ -52,9 +52,9 @@ echo json_encode(['reply' => $temp.' '.$bot_reply]);
 
 // // Twilio SMS function
 function sendSMS($to_number, $message) {
-    $account_sid = 'AC65637a406cc63a325e7b8c91d231000d';
-    $auth_token = 'b545d0f91a530fe769d780408be5bdfd';
-    $twilio_number = '+14138932057';
+    $account_sid = 'Twilio_sid';
+    $auth_token = 'Twilio_auth';
+    $twilio_number = 'Twilio_number';
 
     $client = new \Twilio\Rest\Client($account_sid, $auth_token);
     try {
