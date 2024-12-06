@@ -85,3 +85,8 @@ Now register and login
 Email : Admin@gmail.com
 Password : 1234
 ```
+---
+
+Thank you @tushar-2223 and @Tejas-Valame
+This is developed on the opensourced hotel management software developed by Tushar and Tejas 
+(https://github.com/tushar-2223/Hotel-Management-System)
