@@ -53,6 +53,8 @@ if($usermail == true){
             <li class="pagebtn"><img src="../image/icon/wallet.png">&nbsp&nbsp&nbsp Payment</li>            
             <li class="pagebtn"><img src="../image/icon/bedroom.png">&nbsp&nbsp&nbsp Rooms</li>
             <li class="pagebtn"><img src="../image/icon/staff.png">&nbsp&nbsp&nbsp Staff</li>
+            <li class="pagebtn"><img src="../image/icon/analytics.png">&nbsp&nbsp&nbsp Analytics</li>
+            <li class="pagebtn"><img src="../image/icon/security1.png">&nbsp&nbsp&nbsp Security Surveillance</li>
         </ul>
     </nav>
 
@@ -63,6 +65,8 @@ if($usermail == true){
         <iframe class="frames frame3" src="./payment.php" frameborder="0"></iframe>
         <iframe class="frames frame4" src="./room.php" frameborder="0"></iframe>
         <iframe class="frames frame4" src="./staff.php" frameborder="0"></iframe>
+        <iframe class="frames frame4" src="./analytics.php" frameborder="0"></iframe>
+        <iframe class="frames frame4" src="./security.php" frameborder="0"></iframe>
     </div>
 </body>
 

@@ -136,7 +136,8 @@ ul li a:hover{
     line-height: 100px;
     padding: 5px;
     /* text gradiant */
-    background: -webkit-linear-gradient(317deg, rgba(0, 60, 255, 0.81) 0%, rgb(255 0 123) 70%);
+    /* background: -webkit-linear-gradient(317deg, rgba(0, 60, 255, 0.81) 0%, rgb(255 0 123) 70%); */
+    background: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

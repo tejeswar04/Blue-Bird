@@ -5,6 +5,7 @@
 	<title>Invoice</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="license" href="https://www.opensource.org/licenses/mit-license/">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 	<script src="script.js"></script>
 	<style>
 		/* reset */
@@ -344,6 +345,23 @@
 			opacity: 1;
 		}
 
+		button {
+			background-color: #007bff; /* Blue background */
+			color: white; /* White text */
+			padding: 10px 20px; /* Spacing inside the button */
+			border: none; /* Remove border */
+			border-radius: 5px; /* Rounded corners */
+			font-size: 16px; /* Text size */
+			cursor: pointer; /* Pointer cursor on hover */
+			display: block; /* Ensures it takes up its own line */
+			margin: 20px auto; /* Centers the button horizontally */
+		}
+
+		button:hover {
+			background-color: #0056b3; /* Darker blue on hover */
+		}
+
+
 		@media print {
 			* {
 				-webkit-print-color-adjust: exact;
@@ -380,6 +398,7 @@
 
 
 	<?php
+	
 	ob_start();
 	include '../config.php';
 
@@ -405,15 +424,16 @@
 
 	$type_of_room = 0;
 	if ($troom == "Superior Room") {
-		$type_of_room = 320;
+		$type_of_room = 3000;
 	} else if ($troom == "Deluxe Room") {
-		$type_of_room = 220;
+		$type_of_room = 2000;
 	} else if ($troom == "Guest House") {
-		$type_of_room = 180;
+		$type_of_room = 1500;
 	} else if ($troom == "Single Room") {
-		$type_of_room = 150;
+		$type_of_room = 1000;
 	}
 
+	$ttot = $days * $type_of_room;
 	if ($bed == "Single") {
 		$type_of_bed = $type_of_room * 1 / 100;
 	} else if ($bed == "Double") {
@@ -425,6 +445,7 @@
 	} else if ($bed == "None") {
 		$type_of_bed = $type_of_room * 0 / 100;
 	}
+	$btot=$days*$type_of_bed;
 
 	if ($meal == "Room only") {
 		$type_of_meal = $type_of_bed * 0;
@@ -435,13 +456,14 @@
 	} else if ($meal == "Full Board") {
 		$type_of_meal = $type_of_bed * 4;
 	}
-
+	$mepr=$days*$type_of_meal;
+	$fintot=$ttot+$btot+$mepr;
 	?>
 	<header>
 		<h1>Invoice</h1>
 		<address>
 			<p>HOTEL BLUE BIRD,</p>
-			<p>(+91) 9313346569</p>
+			<p>(+91) 9505437075</p>
 		</address>
 		<span><img alt="" src="../image/logo.jpg"></span>
 	</header>
@@ -495,7 +517,6 @@
 				</tr>
 			</tbody>
 		</table>
-
 		<table class="balance">
 			<tr>
 				<th><span>Total</span></th>
@@ -514,10 +535,31 @@
 	<aside>
 		<h1><span>Contact us</span></h1>
 		<div>
-			<p align="center">Email :- pankhaniyatushar9@gmail.com || Web :- www.bluebird.com || Phone :- +91 9313346569 </p>
+			<p align="center">Email :- bluebird@gmail.com || Web :- www.bluebird.com || Phone :- +91 9505437075 </p>
 		</div>
 	</aside>
+	<button onclick="window.print()">Print Invoice</button>
+	<!-- <button onclick="generatePDF()">Download Invoice</button>
 
+	<script>
+		function generatePDF() {
+			const { jsPDF } = window.jspdf;
+			const doc = new jsPDF();
+
+			// Get the HTML content
+			const invoiceContent = document.body.innerHTML;
+
+			// Add HTML content to the PDF
+			doc.html(invoiceContent, {
+				callback: function (doc) {
+					// Save the generated PDF
+					doc.save(`<?php echo $id; ?>.pdf`); // Use the ID from your PHP code as filename
+				},
+				x: 10,
+				y: 10
+			});
+		}
+	</script> -->
 </body>
 
 </html>
@@ -525,5 +567,4 @@
 <?php
 
 ob_end_flush();
-
 ?>

@@ -51,6 +51,7 @@ if($usermail == true){
       <li><a href="#firstsection">Home</a></li>
       <li><a href="#secondsection">Rooms</a></li>
       <li><a href="#thirdsection">Facilites</a></li>
+      <li><a href="chatbot.html">Chat Bot</a></li>
       <li><a href="#contactus">contact us</a></li>
       <a href="./logout.php"><button class="btn btn-danger">Logout</button></a>
     </ul>
@@ -286,9 +287,6 @@ if($usermail == true){
       <i class="fa-brands fa-instagram"></i>
       <i class="fa-brands fa-facebook"></i>
       <i class="fa-solid fa-envelope"></i>
-    </div>
-    <div class="createdby">
-      <h5>Created by @tushar</h5>
     </div>
   </section>
 </body>
