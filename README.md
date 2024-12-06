@@ -1,11 +1,46 @@
-# Hotel-Management-System
+# 🏨 Bluebird Hotel Management System
 
-Simple hotel booking website with content management system. Users can book rooms for specific dates. Admin can create, update, and delete room details. Admin can manage everything in the app.
+Bluebird Hotel Management System is a comprehensive software solution designed to streamline hotel operations, enabling smooth management for both **guests** and **staff**. Built using the **Scrum methodology**, it supports features like room booking, payment processing, data analytics, and even an AI-powered chatbot! 🤖✨
 
-## Video
-<!--<a href="https://www.youtube.com/watch?v=rKwBxxVXWkM">click here..</a>-->
-https://github.com/tushar-2223/Hotel-Management-System/assets/87109400/08742fd7-5e7b-4459-90ef-c4e6b3e0cabd
+## 🌐 Features
 
+### 👥 User and Staff Logins
+- Separate login interfaces for **users** and **staff**.  
+- **User** can book rooms, make payments, and interact with the chatbot.  
+- **Staff** can manage rooms, view bookings, and handle payments.  
+
+### 🛏️ Room Booking
+- Users can browse available rooms, check availability, and make bookings.  
+- **Staff** can manage room availability and configurations.  
+
+### 💳 Payment Processing
+- Secure payment options integrated with bookings.  
+
+### 📊 Data Analytics
+- **Staff** can view booking statistics, revenue reports, and more.  
+
+### 🗣️ AI Chatbot
+- Provides user assistance for room booking and general inquiries.  
+
+### 🔒 Security Features
+- Ensures data protection and access control.  
+
+---
+
+## 🛠️ Development Process
+
+### 🚀 Scrum Model Development
+- Developed in **weekly sprints** to ensure flexibility and iterative improvements.
+- Code is regularly updated and pushed to **GitHub** for version control.
+
+### 🖥️ Key Modules
+1. **User Management**: Handles user and staff logins, registrations, and details.
+2. **Room Management**: Manage rooms, availability, and bookings.
+3. **Reservation System**: Oversees the lifecycle of reservations.
+4. **Billing System**: Handles all financial transactions.
+5. **Analytics & Reporting**: Generates reports on revenue, occupancy, and more.
+
+---
 ## Tech Stack 
 
 ```sh
